@@ -1,21 +1,37 @@
 //
 //  ContentView.swift
-//  SeriesTEst
+//  Series
 //
-//  Created by IIT PHYS 440 on 2/3/23.
+//  Created by IIT PHYS 440 on 1/30/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @State private var N = String(Int())
+    @State private var n = 1
+// hewl
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("N = \(N)")
+            TextField("Enter N:", text: $N)
+            Text("Sum: \(calculateSum(n: n, N: Int(N)!))")
         }
-        .padding()
+    }
+
+    func calculateSum(n: Int, N: Int) -> Double {
+        // The function you want to sum
+        func s1(n: Double) -> Double {
+            return pow(-1, Double(n)) * Double((n/(n + 1)))
+        }
+
+        var sum = 0.0
+        for i in 0...2*N {
+            sum += s1(n: Double(i))
+        }
+
+        return sum
     }
 }
 
