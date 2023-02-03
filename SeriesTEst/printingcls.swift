@@ -10,5 +10,8 @@ import Cocoa
 class printingcls: ObservableObject {
     
     var sun = 0.0
+    
+    //lkjsd;
+    
 
 }
