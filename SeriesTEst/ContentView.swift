@@ -17,9 +17,9 @@ struct ContentView: View {
             HStack {
                 Text("N = \(N)")
                 TextField("Enter N:", text: $N) }
-            Text("Sum: \(calculateSum1(n: n, N: Int(N)!))")
-            Text("Sum: \(calculateSum2(n: n, N: Int(N)!))")
-            Text("Sum: \(calculateSum3(n: n, N: Int(N)!))")
+            Text("Sum1: \(calculateSum1(n: n, N: Int(N)!))")
+            Text("Sum2: \(calculateSum2(n: n, N: Int(N)!))")
+            Text("Sum3: \(calculateSum3(n: n, N: Int(N)!))")
         }
     }
 
